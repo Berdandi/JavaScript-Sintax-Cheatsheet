@@ -111,6 +111,13 @@ let variados = ['Nacho', 24, true, edades];
 
 miArray[1]; //devuelve el elemento en el indice 1 del array, en este caso devuelve 'Mono'
 
+// copiar el array sin referenciarlo 
+let arrayOriginal = ['hola', 'soy', 1, 'array'];
+let arrayCopia = [...arrayOriginal];
+let arrayCopia2 = arrayOriginal.slice();
+let arrayCopia3 = [].concat(arrayOriginal);
+let arrayCopia4 = arrayOriginal.concat();
+
 //----------------------------Metodos de Arrays----------------------------
 
 miArray.push(elemento1, elemento2, elementoN); //agrega uno o mas elementos al FINAL del array
