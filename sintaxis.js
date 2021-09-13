@@ -191,3 +191,29 @@ let amigos = ['Coco', 'Crash', 'Spyro', 'Sparks']; //array de amigos
 let amigosJSON = JSON.stringify(amigos); // transformamos tipo de dato en un texto formato JSON
 
 let amigosOriginal = JSON.parse(amigosJSON); // transformamos un texto con formato JSON al tipo de dato equivalente en Javascript
+
+
+//----------------------------Modulos----------------------------
+
+let series = ['Friends','Mr. Robot', 'Breaking Bad'];
+
+module.exports = series; // por lo general al final del archivo a module.exports le asignas la variable que quieres exportar
+
+//una vez exportado el modulo, en el archivo que lo querramos importar usamos la función require() y le pasamos como argumento la ruta hacia el archivo donde esta el modulo que exportamos. 
+
+//ejemplo: let modulo = require('./nombreDelModulo');
+
+//----------------------------FileSystem----------------------------
+
+const fs = require('fs');
+fs.writeFileSync('archivoQueQueremosEscribir.txt', 'ContenidoNuevo'); //Si el archivo no existe, lo crea. Este método BORRA TODO el contenido existente y lo REEMPLAZA por el nuevo.
+// Acepta contenido de tipo STRING, si queremos pasar un JSON hay que utilizar el metodo  JSON.stringify();
+
+fs.appendFileSync('archivoDondeQueremosEscribir.txt', 'Contenido'); //Si el archivo no existe, lo crea. Agrega contenido al final del contenido existente sin borrarlo. 
+
+let ejemplo = fs.readFileSync('ejemplo.txt', 'utf-8'); //Nos permite recuperar datos de un archivo para poder usarlos.
+// Como primer parametro va la ruta del archivo a leer. Como segundo parametro aclaramos el tipo de encoding asi podemos decodificar la informacion. 
+
+let ejemploJSON = fs.readFileSync('ejemplo.JSON', 'utf-8');
+let ejemploJ = JSON.parse(ejemploJSON);
+// Si queremos utilizar datos que estan en formato JSON hay que pasarlos a objeto literal para poder manipularlos con JavaScript
