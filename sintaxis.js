@@ -36,7 +36,9 @@ let objetoLiteral = {
 //OR: || (devuelve un booleano)
 //Negacion: !
 
+
 //----------------------------Funciones----------------------------
+
 //Los parametros no son requeridos si o si, pueden tenerlos o no
 //Expresada
 let miFuncion = function(parametro1, parametro2, parametroN){
@@ -49,6 +51,63 @@ function nombre(parametro1, parametro2, parametroN){
     //bloque de codigo
     //return
 };
+
+function sumar(a,b) {
+    return a + b;
+};
+
+//----------------------------Arrow Functions----------------------------
+
+// No necesitamos la palabra reservada function, y para utilizarlas las asignamos a una variable. 
+// le pasamos los parametros primero y luego de la flecha => insertamos el bloque de codigo.
+// si tenes una sola sentencia de código y es lo que queres retornar no hacen falta ni la palabra reservada return ni las llaves. 
+let suma = (a,b) => a + b;
+
+// si tiene un solo parametro no hacen falta los parentesis. 
+
+let elDoble = num => num*2;
+
+//Si tiene varias sentencias a ejecutar si hacen falta las llaves y el return. 
+
+let esPar = numero => {
+	if(numero %2 === 0 ) {
+	    return true;
+    }
+        return false; 
+};
+
+//para ejecutar o invocar la funcion, se trata exactamente igual que con una funcion declarada o expresada. 
+
+console.log(elDoble(6)); //12
+
+// agrego esto para tenerlo en cuenta que puede servir, como conseguir fechas y horas. utilizamos Date(), .getHours() o .getMinutes()
+let horaActual = () => {
+    let fecha = new Date();
+    return fecha.getHours() + ':' + fecha.getMinutes();
+}
+
+
+//----------------------------Callbacks----------------------------
+
+// Callback es cuando recibimos como argumento de una función, otra función y ejecutamos ese argumento.
+// Cuando se pasa una función como callback, es decir como parametro en una función, no va con los parentesis. 
+
+//ejemplo con un callback anonimo
+setTimeout( function(){console.log('Hola Mundo!')}, 1000);
+
+//ejemplo con funciones declaradas previamente
+let sum = (n1, n2) => n1 + n2;
+let rest = (n1, n2) => n1 - n2;
+let mult = (n1, n2) => n1 * n2;
+let div = (n1, n2) => n1 / n2;
+
+let calculadora = (n1,n2, operacion) => operacion(n1,n2);
+
+calculadora(5,3, sum); //con esto sumamos
+calculadora(5,3, rest); //con esto restamos
+calculadora(5,3, mult); //con esto multiplicamos
+calculadora(5,3, div); //con esto dividimos
+
 
 //----------------------------Condicionales----------------------------
 
@@ -90,6 +149,7 @@ switch(expresion) {
     break;
 }
 
+
 //----------------------------Metodos de Strings----------------------------
 
 let unString = 'Soy un string';
@@ -100,6 +160,7 @@ unString.trim(); //elimina espacios en blanco
 unString.slice(desde, hasta); //recorta un string en los indices que le especifiques
 unString.split(); //transforma el string en array
 unString.replace(loQueBuscasReemplazar, elReemplazo); //reemplaza lo que le digas del string por otra cosa que le especifiques
+
 
 //----------------------------Arrays----------------------------
 
@@ -118,6 +179,7 @@ let arrayCopia2 = arrayOriginal.slice();
 let arrayCopia3 = [].concat(arrayOriginal);
 let arrayCopia4 = arrayOriginal.concat();
 
+
 //----------------------------Metodos de Arrays----------------------------
 
 miArray.push(elemento1, elemento2, elementoN); //agrega uno o mas elementos al FINAL del array
@@ -128,6 +190,7 @@ miArray.indexOf(parametro); //te devuelve el indice del parametro que le pidas q
 miArray.lastIndexOf(parametro); //te devuelve el indice del parametro que le pidas que busque comenzando de atras hacia adelante, si no lo encuentra devuelve -1
 miArray.join(); //unifica los elementos del array en un string
 miArray.includes(elemento); // recibe un elemento a buscar en el array y devuelve un booleano
+
 
 //----------------------------Ciclos----------------------------
 
@@ -155,6 +218,7 @@ do{
     vuelta++
 } while(vuelta <= 5);
 
+
 //----------------------------Objetos Literales----------------------------
 
 let nombreObjeto = {
@@ -171,6 +235,7 @@ let nombreObjeto = {
 nombreObjeto.nombrePropiedadN; //con objeto.propiedad accedes al valor de la propiedad del objeto
 nombreObjeto.nombreMetodo(); //con objeto.nombreMetodo(); podes invocar los metodos de tu objeto
 
+
 //----------------------------Funciones Constructoras----------------------------
 
 //son moldes que nos permiten crear otros objetos con las mismas propiedades. Su nombre suele comenzar en mayusculas para diferenciarlas.
@@ -183,6 +248,7 @@ function Auto(marca, modelo){
 //para crear un objeto usando la funcion constructora usamos la palabra new. 
 
 let nuevoAuto = new Auto('Ford', 'Falcon');
+
 
 //----------------------------JSON----------------------------
 
@@ -202,6 +268,7 @@ module.exports = series; // por lo general al final del archivo a module.exports
 //una vez exportado el modulo, en el archivo que lo querramos importar usamos la función require() y le pasamos como argumento la ruta hacia el archivo donde esta el modulo que exportamos. 
 
 //ejemplo: let modulo = require('./nombreDelModulo');
+
 
 //----------------------------FileSystem----------------------------
 
