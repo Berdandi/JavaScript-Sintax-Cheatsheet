@@ -191,6 +191,24 @@ miArray.lastIndexOf(parametro); //te devuelve el indice del parametro que le pid
 miArray.join(); //unifica los elementos del array en un string
 miArray.includes(elemento); // recibe un elemento a buscar en el array y devuelve un booleano
 
+miArray.map(function(elemento){
+    //definimos las modificaciones que queremos aplicar sobre cada elemento del array
+    //recorre y devuelve un array del mismo largo que el original
+});
+miArray.filter(function(elemento){
+    //definimos la condicion que queremos utilizar como filtro para cada elemento del array
+    //recorre, filtra y devuelve un array con los elementos que cumplen la condicion
+});
+miArray.reduce(function(acumulador, elemento, indice, array){
+    //devuelve un unico valor
+    //definimos el comportamiento qeu queremos implementar sobre el acumulador y el elemento
+    // podemos indicar el valor iniciar que por defecto es 0
+});
+miArray.forEach(function(elemento){
+    //definimos el comportamiento que queremos implementar sobre cada elemento del array
+    //no retorna nada
+});
+
 
 //----------------------------Ciclos----------------------------
 
