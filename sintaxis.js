@@ -221,7 +221,7 @@ miArray.sort(); // si no le pasamos callback ordena con la posicion de valor de 
 miArray.sort(callback); //la funcion como parametro con el modo de ordenamiento
 
 miArray.find(callback(e, array)); // devuelve el valor del primer elemento que cumple con la funcion especificada en el callback
-    //indicamos el elemento a buscar y la posicion en la que comenzara
+    //indicamos el elemento 'e' a buscar y la posicion en la que comenzara (opcional) y el array donde se va a buscar
 
 
 //----------------------------Ciclos----------------------------
