@@ -209,6 +209,20 @@ miArray.forEach(function(elemento){
     //no retorna nada
 });
 
+miArray.slice(inicio, fin); //devuelve una copia de una parte del array dentro de un array
+//si el inicio es un valor negativo extrae los ultimos elementos del array desde el final, si es omitido por defecto es 0, si es mayor al array.length devuelve vacio
+//si el final es un valor negativo realiza un desplazamiento al final, si es mayor al array.length o si es omitido extrae hasta el final del array
+
+miArray.splice(inicio, cant, item1,item2,itemN); //nos sirve para remover y/o agregar elementos de un array. 
+//la cantidad es opcional, indica la cantidad de elementos a eliminar, si se omite o es mayor al array.length se eliminaran todos los elementos desde el inicio
+//items(opcional) indica los elementos que se agregaran al array desde el inicio, si se omite splice solo elimina
+
+miArray.sort(); // si no le pasamos callback ordena con la posicion de valor de string Unicode
+miArray.sort(callback); //la funcion como parametro con el modo de ordenamiento
+
+miArray.find(callback(e, array)); // devuelve el valor del primer elemento que cumple con la funcion especificada en el callback
+    //indicamos el elemento a buscar y la posicion en la que comenzara
+
 
 //----------------------------Ciclos----------------------------
 
