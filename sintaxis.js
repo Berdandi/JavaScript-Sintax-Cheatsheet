@@ -7,13 +7,13 @@ const verdadero = true; //boolean, puede ser true o false
 let array = [ 1, 'hola', true, false, [], {}]; // puede contener cualquier tipo de dato adentro
 
 let objetoLiteral = {
-    nombrePropiedad1: valor1,
-    nombrePropiedad2: valor2,
-    nombrePropiedadN: valorN,
-    nombreMetodo: function(parametro1, parametroN) {
-        // bloque codigo
-        //return o console.log();
-    }
+        nombrePropiedad1: valor1,
+        nombrePropiedad2: valor2,
+        nombrePropiedadN: valorN,
+        nombreMetodo: function(parametro1, parametroN) {
+            // bloque codigo
+            //return o console.log();
+        }
 };
 
 // literal template, es lo mismo que concatenar cadenas de texto con el operador + 
@@ -254,14 +254,14 @@ do{
 //----------------------------Objetos Literales----------------------------
 
 let nombreObjeto = {
-    nombrePropiedad1: valor1,
-    nombrePropiedad2: valor2,
-    nombrePropiedadN: valorN,
-    nombreMetodo: function(parametros){
-        //bloque de codigo
-        // para referime a algo que es parte del objeto uso la palabra reservada this. Un ejemplo seria this.nombrePropiedad1 si quiero referirme al valor de nombrePropiedad1
-        //return o console.log
-    }
+        nombrePropiedad1: valor1,
+        nombrePropiedad2: valor2,
+        nombrePropiedadN: valorN,
+        nombreMetodo: function(parametros){
+            //bloque de codigo
+            //para referime a algo que es parte del objeto uso la palabra reservada this. Un ejemplo seria this.nombrePropiedad1 si quiero referirme al valor de nombrePropiedad1
+            //return o console.log
+        }
 }
 
 nombreObjeto.nombrePropiedadN; //con objeto.propiedad accedes al valor de la propiedad del objeto
